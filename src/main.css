@@ -1,0 +1,286 @@
+@charset "utf-8";
+@viewport {width: device-width;}
+
+/*
+  These are project-specific styles.
+  You'll at least want to edit these a little. */
+
+/*
+  1 rem == baseline grid unit.
+  The calc() function flexes the baseline grid,
+  so everything is automatically a bit bigger on larger screens.
+
+  Edit the em value to change the grid's base size,
+  but make sure the font-sizes still feel good on small screens.
+
+  Edit the vw/vh/vmin values to change how much the grid flexes,
+  but make sure your body text doesn't get huge in large viewports.
+
+  Details:
+  http://codepen.io/CrocoDillon/pen/jgmwt?editors=0010 */
+
+html {
+  font-size: 133%; /* Used if browser doesn't support calc() */
+  font-size: calc(0.875em + 0.5vw + 0.5vh + 0.25vmin);
+}
+
+/*
+  Font-sizes aligned to the 1 rem baseline grid.
+  Useful and readable at all screen sizes above 320px.
+  Adjust the font-size multipliers to suit your font. */
+
+.size-0-75    { line-height: 0.75rem; font-size: 0.6405rem; }
+.size-1, body { line-height: 1.00rem; font-size: 0.8rem; }
+.size-1-25    { line-height: 1.25rem; font-size: 1.0675rem;}
+.size-1-5     { line-height: 1.50rem; font-size: 1.365rem; }
+.size-2       { line-height: 2.00rem; font-size: 2rem; }
+
+/*
+  Font-sizes that fit the viewport.
+  Awesome on large screens yet still readable at 320px.
+  Adjust the line-heights to suit your font. */
+
+.size-fit-1 { line-height: 1.333; font-size: calc(1.80vw + 1.80vh + 0.90vmin); }
+.size-fit-2 { line-height: 1.333; font-size: calc(2.35vw + 2.35vh + 1.18vmin); }
+.size-fit-3 { line-height: 1.000; font-size: calc(3.30vw + 3.30vh + 1.65vmin); }
+.size-fit-4 { line-height: 1.000; font-size: calc(4.20vw + 4.20vh + 2.10vmin); }
+.size-fit-5 { line-height: 0.965; font-size: calc(6.00vw + 6.00vh + 3.00vmin); }
+
+/*
+  A grid overlay for the baseline grid */
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255,0,0,0.236), transparent 9%),
+    linear-gradient(to right, rgba(255,0,0,0.236), transparent 9%),
+    linear-gradient(rgba(255,0,0,0.236), transparent 9%),
+    linear-gradient(to right, rgba(255,0,0,0.236), transparent 9%)
+  ;
+  background-size:
+    100% 1rem,
+    1rem 100%,
+    100% 0.25rem,
+    0.25rem 100%
+  ;
+}
+
+/*
+  Roundings and strokes */
+
+.rounded { border-radius: 0.125rem; }
+.stroke-dotted { stroke-dasharray: 1px 1px; }
+.stroke-dashed { stroke-dasharray: 3px 2px; }
+
+/*
+  Colors generated with
+  http://tools.medialab.sciences-po.fr/iwanthue/
+  http://tristen.ca/hcl-picker/ */
+
+/* Low chroma */
+
+.color-1  { color:            #2E2923; }
+.bg-1     { background-color: #2E2923; }
+.border-1 { border-color:     #2E2923; }
+.fill-1   { fill:             #2E2923; }
+.stroke-1 { stroke:           #2E2923; }
+
+.color-2  { color:            #4D463C; }
+.bg-2     { background-color: #4D463C; }
+.border-2 { border-color:     #4D463C; }
+.fill-2   { fill:             #4D463C; }
+.stroke-2 { stroke:           #4D463C; }
+
+.color-3  { color:            #6E6557; }
+.bg-3     { background-color: #6E6557; }
+.border-3 { border-color:     #6E6557; }
+.fill-3   { fill:             #6E6557; }
+.stroke-3 { stroke:           #6E6557; }
+
+.color-4  { color:            #918574; }
+.bg-4     { background-color: #918574; }
+.border-4 { border-color:     #918574; }
+.fill-4   { fill:             #918574; }
+.stroke-4 { stroke:           #918574; }
+
+.color-5  { color:            #B6A892; }
+.bg-5     { background-color: #B6A892; }
+.border-5 { border-color:     #B6A892; }
+.fill-5   { fill:             #B6A892; }
+.stroke-5 { stroke:           #B6A892; }
+
+.color-6  { color:            #DDCBB2; }
+.bg-6     { background-color: #DDCBB2; }
+.border-6 { border-color:     #DDCBB2; }
+.fill-6   { fill:             #DDCBB2; }
+.stroke-6 { stroke:           #DDCBB2; }
+
+/* High chroma */
+
+.color-bright-1  { color:            #0A2D3F; }
+.bg-bright-1     { background-color: #0A2D3F; }
+.border-bright-1 { border-color:     #0A2D3F; }
+.fill-bright-1   { fill:             #0A2D3F; }
+.stroke-bright-1 { stroke:           #0A2D3F; }
+
+.color-bright-2  { color:            #4F4065; }
+.bg-bright-2     { background-color: #4F4065; }
+.border-bright-2 { border-color:     #4F4065; }
+.fill-bright-2   { fill:             #4F4065; }
+.stroke-bright-2 { stroke:           #4F4065; }
+
+.color-bright-3  { color:            #9C4A73; }
+.bg-bright-3     { background-color: #9C4A73; }
+.border-bright-3 { border-color:     #9C4A73; }
+.fill-bright-3   { fill:             #9C4A73; }
+.stroke-bright-3 { stroke:           #9C4A73; }
+
+.color-bright-4  { color:            #DE5D64; }
+.bg-bright-4     { background-color: #DE5D64; }
+.border-bright-4 { border-color:     #DE5D64; }
+.fill-bright-4   { fill:             #DE5D64; }
+.stroke-bright-4 { stroke:           #DE5D64; }
+
+.color-bright-5  { color:            #FE8B42; }
+.bg-bright-5     { background-color: #FE8B42; }
+.border-bright-5 { border-color:     #FE8B42; }
+.fill-bright-5   { fill:             #FE8B42; }
+.stroke-bright-5 { stroke:           #FE8B42; }
+
+.color-bright-6  { color:            #F3CA24; }
+.bg-bright-6     { background-color: #F3CA24; }
+.border-bright-6 { border-color:     #F3CA24; }
+.fill-bright-6   { fill:             #F3CA24; }
+.stroke-bright-6 { stroke:           #F3CA24; }
+
+/* Other */
+
+.color-none  { color:            none; }
+.bg-none     { background-color: none; }
+.border-none { border-color:     none; }
+.fill-none   { fill:             none; }
+.stroke-none { stroke:           none; }
+
+.color-transparent  { color:            transparent; }
+.bg-transparent     { background-color: transparent; }
+.border-transparent { border-color:     transparent; }
+
+.color-inherit  { color:            inherit; }
+.bg-inherit     { background-color: inherit; }
+.border-inherit { border-color:     inherit; }
+
+.bg-currentcolor     { background-color: currentcolor; }
+.border-currentcolor { border-color:     currentcolor; }
+.fill-currentcolor   { fill:             currentcolor; }
+.stroke-currentcolor { stroke:           currentcolor; }
+
+/*
+  Base styles
+  and things easily forgotten */
+
+html {
+  font-family:
+    "PT Serif", serif
+  ;
+  /*-webkit-tap-highlight-color: rgba(0,0,0,0);*/
+}
+
+.font-title {
+  font-family: "Tillana", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+body {
+  max-width: 100%;
+  overflow: hidden;
+  overflow-y: visible;
+}
+
+::selection {
+
+}
+
+::placeholder {
+
+}
+
+/*
+  Entry animations
+  (Played once when the element appears in the DOM.) */
+
+.enter-zoom {
+  animation: enter-zoom 200ms cubic-bezier(0.236, 0.000, 0.236, 1.000);
+}
+
+@keyframes enter-zoom {
+  0%   { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+.enter-fade {
+  animation: enter-fade 200ms cubic-bezier(0.236, 0.000, 0.236, 1.000);
+}
+
+@keyframes enter-fade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/*
+  Spinner animation
+  Useful for loading indicators */
+
+.spin {
+  animation: spin 1230ms linear infinite;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*      Strictly project-specific styles     */
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+.max-width {
+  max-width: 36rem;
+}
+
+@media (max-width: 40rem) {
+  #language-switcher {
+    display: block !important;
+  }
+
+  .suomeksi,
+  .english {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .suomeksi {
+    display: none;
+  }
+
+  #suomeksi:target .suomeksi {
+    display: block;
+  }
+
+  #suomeksi:target .english {
+    display: none;
+  }
+
+  .select-suomeksi,
+  #english:target .select-suomeksi,
+  #suomeksi:target .select-english {
+    font-weight: normal;
+  }
+
+  .select-english,
+  #english:target .select-english,
+  #suomeksi:target .select-suomeksi {
+    font-weight: bold;
+  }
+}
